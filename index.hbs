@@ -1,0 +1,186 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+{{! The big featured header }}
+<header class="main-header">
+  <nav class="main-nav overlay clearfix">
+    {{#if @blog.logo}}
+      <a class="blog-logo" href="{{@blog.url}}">
+        <img src="{{@blog.logo}}" alt="{{@blog.title}}" />
+      </a>
+    {{/if}}
+
+    {{#if @blog.navigation}}
+      <a class="menu-button icon-menu" href="#"><span class="word">MENU</span></a>
+    {{/if}}
+  </nav>
+</header>
+
+
+{{! The main content area on the homepage }}
+<main id="content" class="content" role="main">
+
+{{! Intro Top Content Start }}
+  <section class="intro" id="home">
+    <div class="cover"></div>
+    <div class="intro-body">
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div id="intro-slider" class="flexslider">
+
+                <ul class="slides">
+                  <li>
+                    <h3 class="brand-heading">I am web front-end developer.</h3>
+                    <div class="line"></div>
+                    <p class="intro-text">欢迎来到我的世界,我是前端开发者.</p>
+                  </li>
+                  <li>
+                    <h3 class="brand-heading">Focus on quality and solution. </h3>
+                    <div class="line"></div>
+                    <p class="intro-text">专注品质与独特的解决方案.</p>
+                  </li>
+                  <li>
+                    <h3 class="brand-heading">Lost in summerday for all of the clouds. </h3>
+                    <div class="line"></div>
+                    <p class="intro-text">最爱夏天,所有的云都让人着迷.</p>
+                  </li>
+                </ul>
+
+               </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+  </section>
+
+{{! Welcome Content Start }}
+  <section class="welcome-con">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 welcome-text animated">
+          <h3>Welcome to my blog</h3>
+          <div class="line2 line-welcome"></div>
+          <p>生活总是需要赏心悦目，希望通过巧妙设计与Web技术的结合实现一流的用户体验。<br>你之欣喜，我之所求。<br>Hope my efforts can let you get the required. </p>
+          <a class="btn1" href="#works">More Works</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{{! Services Content Start }}
+  <section class="services-con" id="services">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 fade-text animated">
+        <h3>My Services</h3>
+        <div class="line2 line2-services"></div>
+      </div>
+      <div class="col-md-12 no-padding">
+
+        <div class="col-md-4 bounce-text animated">
+          <div class="fa fa-laptop"></div>
+          <h1>Responsive Website<br><span class="text-thin">响应式网站定制</span></h1>
+        </div>
+        <div class="col-md-4 bounce-text animated">
+          <div class="fa fa-mobile-phone"></div>
+          <h1>WebApp Production<br><span class="text-thin">WebApp制作</span></h1>
+        </div>
+        <div class="col-md-4 bounce-text animated">
+          <div class=" fa fa-magic"></div>
+          <h1>UI&UX Design<br><span class="text-thin">UI&UX设计</span></h1>
+        </div>
+        <div class="col-md-6 bounce-text animated">
+          <div class=" fa fa-wechat"></div>
+          <h1>WX H5<br><span class="text-thin">微信H5营销页</span></h1>
+        </div>
+        <div class="col-md-6 bounce-text animated">
+          <div class=" fa fa-lightbulb-o"></div>
+          <h1>SPA<br><span class="text-thin">小程序</span></h1>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  </section>
+
+{{! Ghost Content Start }}
+  <div class="ghost-con">
+    {{! The tag below includes the post loop - partials/loop.hbs }}
+    {{> "loop"}}
+  </div>
+
+{{! Works Content Start }}
+  <section class="works-con" id="works">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 animated fade-text">
+          <h3>all my works is here</h3>
+          <div class="line2 line2-services"></div>
+          <p>移动、平板、PC跨平台项目前端实例。包括Web设计和App设计。</p>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 no-padding">
+          <div class="col-md-4 no-padding bounce-text animated">
+            <img src="/assets/img/work/wslm.jpg" alt="中华微商联盟协会官网">
+          </div>
+          <div class="col-md-4 no-padding bounce-text animated">
+            <img src="/assets/img/work/yzlz.jpg" alt="一走了之学生社区">
+          </div>
+          <div class="col-md-4 no-padding bounce-text animated">
+            <img src="/assets/img/work/jy.jpg" alt="教育">
+          </div>
+          <div class="col-md-4 no-padding bounce-text animated">
+            <img src="/assets/img/work/fzapp.jpg" alt="vip生活">
+          </div>
+          <div class="col-md-4 no-padding bounce-text animated">
+            <img src="/assets/img/work/fzapp.jpg" alt="webApp">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{{! Contact Content Start }}
+  <section class="contact-con">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 no-padding animated fade-text">
+          <img src="/assets/img/code.jpg" alt="微信号:szm829">
+          <div class="line2 line2-contact"></div>
+          <div class="contact-text">
+          <p>顾虑使我们都变成了懦夫，使得那果断的本色蒙上了一层思虑的惨白容颜，本来可以做出伟大的事业，由于思虑就化为乌有了，也丧失了行动的能力。</p>
+          <p>Thus conscience does make cowards of us all,
+                    And thus the native hue of resolution
+                    Is sicklied o'er with the pale cast of thought,
+                    And enterprises of great pith and moment
+                    With this regard their currents turn awry
+                    And lose the name of action.</p>
+          <p>我也曾迷茫，但是现在，亲爱的朋友，知道自己喜欢什么真好。</p>
+          </div>
+        </div>
+        <div class="col-md-12 no-padding">
+          <div class="col-md-4 animated fade-text">
+            <h5><i class="fa fa-phone"></i>Telephone</h5>
+            <p>+86-181-0827-2714</p>
+          </div>
+          <div class="col-md-4 animated fade-text">
+            <h5><i class="fa fa-map-marker"></i>Address</h5>
+            <p>四川省成都市成华区龙潭寺华康路8号金科天籁城</p>
+          </div>
+          <div class="col-md-4 animated fade-text">
+            <h5><i class="fa fa-envelope-o"></i>Email给我</h5>
+            <a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=j-b67uH75u7h7ebh6Pf66s-_-qHs4OI" class="email-underline">yuantianbingxue@qq.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>

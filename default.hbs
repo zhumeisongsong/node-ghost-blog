@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {{! Document Settings }}
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  {{! Page Meta }}
+  <title>{{meta_title}}</title>
+  <meta name="description" content="{{meta_description}}"/>
+  <meta name="keywords" content="zhumei song,Zhumei Song,dsshow,DSSHOW,Web前端工程,UI设计,App,微信开发,小程序,网站设计,成都"/>
+  <meta name="subject" content="Web前端工程,UI设计,App,微信开发,小程序,网站设计"/>
+  <meta name="autor" content="MaySong,宋竹梅,Web前端,成都">
+
+  <meta name="HandheldFriendly" content="True"/>
+  <meta name="viewport" content="width=device-width initial-scale=1, maximum-scale=1, user-scalable=no"/>
+
+  <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+  {{! Styles'n'Scripts }}
+
+  <link rel="stylesheet" href="{{asset "css/screen.css"}}"/>
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="{{asset "css/style.css"}}"/>
+  <link rel="stylesheet" href="{{asset "css/supersized.css"}}"/>
+  <link rel="stylesheet" href="{{asset "css/flex-slider.css"}}"/>
+  <link rel="stylesheet" href="{{asset "css/animate.css"}}"/>
+
+  <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1259788796'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s5.cnzz.com/stat.php%3Fid%3D1259788796' type='text/javascript'%3E%3C/script%3E"));
+    document.getElementById("cnzz_stat_icon_1259788796").style.display = "none";
+  </script>
+
+  {{! Ghost outputs important style and meta data with this tag }}
+  {{ghost_head}}
+</head>
+
+<body class="{{body_class}} nav-closed">
+
+{{navigation}}
+
+<div class="site-wrapper">
+
+  {{! Everything else gets inserted here }}
+  {{{body}}}
+  <footer class="site-footer clearfix">
+    <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+  </footer>
+
+</div>
+
+{{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
+{{! Ghost outputs important scripts and data with this tag }}
+{{ghost_foot}}
+
+<script src="https://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="{{asset "js/supersized.3.2.7.min.js"}}"></script>
+<script src="{{asset "js/img-trans.js"}}"></script>
+<script src="{{asset "js/jquery-flex-slider.js"}}"></script>
+<script src="{{asset "js/intro-text-slider.js"}}"></script>
+<script src="{{asset "js/animate.js"}}"></script>
+<script src="{{asset "js/jquery.fitvids.js"}}"></script>
+<script src="{{asset "js/index.js"}}"></script>
+<script src="{{asset "js/smoothscroll.js"}}"></script>
+
+</body>
+</html>
