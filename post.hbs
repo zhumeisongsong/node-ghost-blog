@@ -6,10 +6,10 @@
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
 
-  <header class="main-header post-head {{#if feature_image}}" style="background-image: url({{image_url}}){{else}}no-cover{{/if}}">
+  <header class="main-header post-head {{#if feature_image}}" style="background-image: url({{feature_image}}){{else}}no-cover{{/if}}">
     <div class="post-cover">
       <nav class="main-nav {{#if feature_image}}overlay{{/if}} clearfix">
-        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}"
+        {{#if @blog.logo}}<a class="blog-logo" href="https://maysongshow.cn"><img src="{{@blog.logo}}"
                                                                          alt="{{@blog.title}}"/></a>{{/if}}
         {{#if @blog.navigation}}
           <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
@@ -37,9 +37,9 @@
         {{! Everything inside the #author tags pulls data from the author }}
         {{#author}}
 
-          {{#if profile_image}}
+          {{#if author.profile_image}}
             <figure class="author-image">
-              <a class="img" href="{{url}}" style="background-image: url({{image_url}})"><span class="hidden">{{name}}'s Picture</span></a>
+              <a class="img" href="{{url}}" style="background-image: url({{author.profile_image}})"><span class="hidden">{{name}}'s Picture</span></a>
             </figure>
           {{/if}}
 
@@ -87,7 +87,7 @@
 
   <aside class="read-next">
     {{#next_post}}
-      <a class="read-next-story {{#if feature_image}}" style="background-image: url({{image_url}}){{else}}no-cover{{/if}}"
+      <a class="read-next-story {{#if feature_image}}" style="background-image: url({{feature_image}}){{else}}no-cover{{/if}}"
           href="{{url}}">
         <section class="post">
           <h2>{{title}}</h2>
@@ -95,7 +95,7 @@
       </a>
     {{/next_post}}
     {{#prev_post}}
-      <a class="read-next-story prev {{#if feature_image}}" style="background-image: url({{image_url}}){{else}}no-cover{{/if}}"
+      <a class="read-next-story prev {{#if feature_image}}" style="background-image: url({{feature_image}}){{else}}no-cover{{/if}}"
           href="{{url}}">
         <section class="post">
           <h2>{{title}}</h2>

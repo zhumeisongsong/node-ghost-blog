@@ -6,7 +6,7 @@
   <header class="main-header author-head">
     <nav class="main-nav overlay clearfix">
       {{#if @blog.logo}}
-        <a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}"/></a>{{/if}}
+        <a class="blog-logo" href="https://maysongshow.cn"><img src="{{@blog.logo}}" alt="{{@blog.title}}"/></a>{{/if}}
       {{#if @blog.navigation}}
         <a class="menu-button icon-menu" href="#"><span class="word" style="color:#fff">Menu</span></a>
       {{/if}}
@@ -14,9 +14,9 @@
   </header>
 
   <section class="author-profile inner">
-    {{#if profile_image}}
+    {{#if author.profile_image}}
       <figure class="author-image">
-        <div class="img" style="background-image: url({{img_url}})"><span class="hidden">{{name}}'s Picture</span></div>
+        <div class="img" style="background-image: url({{author.profile_image}})"><span class="hidden">{{name}}'s Picture</span></div>
       </figure>
     {{/if}}
     <h1 class="author-title">{{name}}</h1>
