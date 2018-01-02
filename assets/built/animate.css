@@ -1,0 +1,2 @@
+.animated{animation-duration:1s;animation-fill-mode:both;visibility:visible}@keyframes a{0%{opacity:0;transform:scale(.3)}50%{opacity:1;transform:scale(1.05)}70%{transform:scale(.9)}to{transform:scale(1)}}.bounceIn{animation-name:a}@keyframes b{0%{opacity:0}to{opacity:1}}.fadeIn{animation-name:b}
+/*# sourceMappingURL=animate.css.map */
